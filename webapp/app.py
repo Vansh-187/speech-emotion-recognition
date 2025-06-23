@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import time
 import os 
-
 st.set_page_config(
     page_title="Speech Emotion Recognition",
     page_icon="🎤",
@@ -173,7 +172,7 @@ def main():
         st.caption("**Architecture:** CNN-LSTM Hybrid")
         st.caption("**Accuracy:** 82.6% (Validation Set)")
         st.divider()
-        st.markdown("[GitHub Repository](https://github.com/your-repo)")
+        st.markdown("[GitHub Repository](https://github.com/Vansh-187/speech-emotion-recognition)")
     
     # Main content area
     col1, col2 = st.columns([1, 1], gap="large")
@@ -219,7 +218,7 @@ def main():
                     # Load model
                     device = torch.device('cpu')
                     model = CNNLSTM(num_classes=8).to(device)
-                    model_path = os.path.join("..","models","best_model.pth")
+                    model_path = os.path.join('models','best_model.pth')
                     model.load_state_dict(torch.load(model_path, map_location=device))
                     model.eval()
                     
