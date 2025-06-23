@@ -1,6 +1,7 @@
 import torch
 import numpy as np
 import librosa
+import os 
 
 # Emotion mapping (same as training)
 EMOTION_DICT = {
@@ -81,7 +82,7 @@ def extract_features(file_path):
     
     return np.hstack([chroma, mfcc, zcr, mel, rms])
 
-def predict_emotion(audio_path, model_path='best_model.pth'):
+def predict_emotion(audio_path, model_path='models/best_model.pth'):
     # Load model
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = CNNLSTM(num_classes=8).to(device)
@@ -104,7 +105,7 @@ def predict_emotion(audio_path, model_path='best_model.pth'):
 
 if __name__ == "__main__":
     audio_path = input("Enter the path to the audio file: ")
-    model_path =  "best_model.pth"
+    model_path =  "models/best_model.pth"
 
     try:
         emotion = predict_emotion(audio_path, model_path)
