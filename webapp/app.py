@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 import time
+import os 
 
 st.set_page_config(
     page_title="Speech Emotion Recognition",
@@ -218,7 +219,8 @@ def main():
                     # Load model
                     device = torch.device('cpu')
                     model = CNNLSTM(num_classes=8).to(device)
-                    model.load_state_dict(torch.load('best_model.pth', map_location=device))
+                    model_path = os.path.join("..","models","best_model.pth")
+                    model.load_state_dict(torch.load('model_path', map_location=device))
                     model.eval()
                     
                     # Prepare input tensor
