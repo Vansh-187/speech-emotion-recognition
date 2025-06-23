@@ -220,7 +220,7 @@ def main():
                     device = torch.device('cpu')
                     model = CNNLSTM(num_classes=8).to(device)
                     model_path = os.path.join("..","models","best_model.pth")
-                    model.load_state_dict(torch.load('model_path', map_location=device))
+                    model.load_state_dict(torch.load(model_path, map_location=device))
                     model.eval()
                     
                     # Prepare input tensor
