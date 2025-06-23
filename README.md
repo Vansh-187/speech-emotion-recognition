@@ -104,8 +104,7 @@ paste the audio (.wav) file path in terminal
 
 ## 🎥 Demo Video
 
-[![Project Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/VIDEO_ID)
+[![Project Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/Fol85fDFNas?si=pkmoPpKLGKQZzi1I)
 
-<!-- Replace VIDEO_ID with your YouTube demo video ID -->
 
 
