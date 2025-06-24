@@ -90,7 +90,7 @@ paste the audio (.wav) file path in terminal
 ├── models/ # Trained model(s)
 │ └── best_model.pth
 ├── notebooks/ # Jupyter notebook(s)
-│ └── emotion_classification.ipynb
+│ └── emotion_classifier_final.ipynb
 ├── webapp/ # Streamlit web application
 │ ├── app.py
 │ └── requirements.txt
